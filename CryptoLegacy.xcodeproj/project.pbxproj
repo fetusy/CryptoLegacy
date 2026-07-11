@@ -10,7 +10,6 @@
 		B1E1947A7F5B4CF8B50EFFA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63501BFC0B74F6ABB6DF58A; };
 		9BC63F2518D94668B6BD5412 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D663DBE71084EBE99B5D10A; };
 		E03FEDE620634B1CA4445D48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EC5DE91AAC45D7A6541776; };
-		ED54A44B12BB482DB7626F45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCD5EAE4A33B48DF8FA1F356; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,7 +17,6 @@
 		0D663DBE71084EBE99B5D10A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		81EC5DE91AAC45D7A6541776 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C5B9F89DD61E4640AB1DE338 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BCD5EAE4A33B48DF8FA1F356 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51E9B94F9D0E4E91A18F2428 /* CryptoLegacy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoLegacy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -38,16 +36,8 @@
 				0D663DBE71084EBE99B5D10A /* SceneDelegate.swift */,
 				81EC5DE91AAC45D7A6541776 /* ViewController.swift */,
 				C5B9F89DD61E4640AB1DE338 /* Info.plist */,
-				F7C94549F2504770AC20D533 /* Assets.xcassets */,
 			);
 			path = CryptoLegacy;
-			sourceTree = "<group>";
-		};
-		F7C94549F2504770AC20D533 = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Assets.xcassets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -115,7 +105,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED54A44B12BB482DB7626F45 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,7 +167,7 @@
 		D2D901A4B2464468827C350A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
@@ -205,7 +194,7 @@
 		EB27837D400E49CD8840EB33 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
