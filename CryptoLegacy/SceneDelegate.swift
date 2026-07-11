@@ -11,10 +11,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-        guard let url = URLContexts.first?.url else { return }
+        guard let url = URLContexts.first?.url else {
+            print("[CryptoLegacy] openURLContexts called but no URL")
+            return
+        }
+        print("[CryptoLegacy] Received URL: \(url.absoluteString)")
+        print("[CryptoLegacy] scheme=\(url.scheme ?? "nil") host=\(url.host ?? "nil")")
+        
         if url.scheme == "cryptomator-legacy", url.host == "upgrade" {
-            if let targetURL = URL(string: "cryptomator://purchase") {
-                UIApplication.shared.open(targetURL, options: [:], completionHandler: nil)
+            let targetURL = URL(string: "cryptomator://purchase")!
+            print("[CryptoLegacy] Opening: \(targetURL.absoluteString)")
+            
+            UIApplication.shared.open(targetURL, options: [:]) { success in
+                print("[CryptoLegacy] open() completed, success=\(success)")
             }
         }
     }

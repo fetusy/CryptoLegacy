@@ -18,15 +18,9 @@ class ViewController: UIViewController {
             label.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
         
-        // Keychain 쓰기: eligibleForUpgrade = true
+        // Keychain 쓰기
         writeUpgradeFlag()
-        
-        // Cryptomator로 리다이렉트
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            if let url = URL(string: "cryptomator://purchase") {
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
-            }
-        }
+        print("[CryptoLegacy] Keychain flag written")
     }
     
     private func writeUpgradeFlag() {
@@ -40,9 +34,8 @@ class ViewController: UIViewController {
             kSecValueData as String: data,
         ]
         
-        // 기존 항목 삭제 후 쓰기
         SecItemDelete(query as CFDictionary)
         let status = SecItemAdd(query as CFDictionary, nil)
-        print("Keychain write status: \(status)")
+        print("[CryptoLegacy] Keychain write status: \(status)")
     }
 }
